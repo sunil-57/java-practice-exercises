@@ -11,5 +11,12 @@ public class Bike {
     //entity ko data lai variables haru use garera rakhinxa
 
     //TODO bike ko behaviour k k represent garne??
-    //
+    //press brake, release brake, accelarate, turn on side light
+    public void pressBrake(){
+        System.out.println("Rokkidai xha");
+    }
+
+    public void releaseBrake(){
+        System.out.println("daudidai xha");
+    }
 }
