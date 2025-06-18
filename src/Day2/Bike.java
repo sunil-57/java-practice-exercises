@@ -19,4 +19,12 @@ public class Bike {
     public void releaseBrake(){
         System.out.println("daudidai xha");
     }
+
+    public static void main(String[] args) {
+        String bike_name = "Something";
+        Bike bike1 = new Bike();
+        System.out.println(bike1.bike_name);
+        System.out.println(bike_name);
+        bike1.pressBrake();
+    }
 }
