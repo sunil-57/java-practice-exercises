@@ -23,7 +23,10 @@ public class Student {
         }else{
             if(marks>70){
                 return "A+";
-            }else{
+            }else if(marks<60){
+                return "pass";
+            }
+            else{
                return "Failed";
             }
         }
