@@ -16,6 +16,7 @@ bin/
 !**/src/test/**/bin/
 .idea/
 Java-Practice-Exercises.iml
+*.class
 
 ### NetBeans ###
 /nbproject/private/
