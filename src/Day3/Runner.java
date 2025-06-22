@@ -23,9 +23,5 @@ public class Runner {
             studentList.add(student3);
             studentList.add(student4);
             studentList.add(student5);
-
-
-
-
     }
 }
