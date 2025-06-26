@@ -2,19 +2,17 @@ package quiz;
 
 public class Question {
     private String title;
-    private int  option_1;
-    private int  option_2;
-    private int  option_3;
-    private int  option_4;
-    private int  correct_answer;
+    private int[] options = new int[4];
+    private int correct_index;
 
-    public Question(String title, int option_1, int option_2, int option_3, int option_4, int correct_answer) {
+    public Question(String title, int option_1, int option_2, int option_3, int option_4, int correct_index)
+    {
         this.title = title;
-        this.option_1 = option_1;
-        this.option_2 = option_2;
-        this.option_3 = option_3;
-        this.option_4 = option_4;
-        this.correct_answer = correct_answer;
+        this.options[0] = option_1;
+        this.options[1] = option_2;
+        this.options[2] = option_3;
+        this.options[3]= option_4;
+        this.correct_index = correct_index;
     }
 
     public String getTitle() {
@@ -25,48 +23,24 @@ public class Question {
         this.title = title;
     }
 
-    public int getOption_1() {
-        return option_1;
+
+    public int getCorrect_index() {
+        return correct_index;
     }
 
-    public void setOption_1(int option_1) {
-        this.option_1 = option_1;
+    public void setCorrect_index(int correct_index) {
+        this.correct_index = correct_index;
     }
 
-    public int getOption_2() {
-        return option_2;
+    public void showOptions(){
+        for(int i = 0; i < this.options.length; i++){
+            System.out.println(i+1 + " . "+ options[i]);
+        }
     }
 
-    public void setOption_2(int option_2) {
-        this.option_2 = option_2;
-    }
-
-    public int getOption_3() {
-        return option_3;
-    }
-
-    public void setOption_3(int option_3) {
-        this.option_3 = option_3;
-    }
-
-    public int getOption_4() {
-        return option_4;
-    }
-
-    public void setOption_4(int option_4) {
-        this.option_4 = option_4;
-    }
-
-    public int getCorrect_answer() {
-        return correct_answer;
-    }
-
-    public void setCorrect_answer(int correct_answer) {
-        this.correct_answer = correct_answer;
-    }
 
     public boolean checkAnswer(int answer){
-        if(answer == this.correct_answer){
+        if((answer) == this.correct_index){
             return true;
         }
         return false;
