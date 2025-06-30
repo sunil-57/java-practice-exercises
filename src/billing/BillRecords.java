@@ -18,7 +18,7 @@ public class BillRecords {
         this.billAmount = billAmount;
         this.billingDate = billingDate;
     }
-    // add a customer
+    // add a customer bill record
     public static boolean addBillRecord(BillRecords billRecords){
         boolean isRecordAdded = false;
         if(billRecordsList.add(billRecords)){
