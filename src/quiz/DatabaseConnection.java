@@ -17,17 +17,4 @@ public class DatabaseConnection {
         return conn;
     }
 
-    public static void main(String[] args) {
-        try {
-            Connection conn = DatabaseConnection.connect();
-            if(conn != null){
-                System.out.println("Connected Successfully");
-            }
-            else{
-                System.out.println("Failed to connect");
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }

@@ -23,15 +23,20 @@ public class BillingApp {
                double unitsConsumed = Double.parseDouble(scan.nextLine());
                Customer customer = new Customer(customerName, houseNumber, unitsConsumed);
                double billAmount = customer.calculateBill();
-               BillRecords record = new BillRecords(customer, billAmount, "2060/8/1");
+               BillRecords record = new BillRecords(customer, billAmount);
                if(BillRecords.addBillRecord(record)){
                    System.out.println("Record added successfully....");
+                   System.out.println("Bill Info: ");
+                   //TODO print the bill here
                }else{
                    System.out.println("Failed...");
                }
            }else if(option == 2){
-               System.out.println("Working on it");
-               System.out.println("Coming soon");
+               BillRecords record = BillRecords.showHighestPayingCustomer();
+               System.out.println("Customer name: "+ record.getCustomer().getName());
+               System.out.println("House Number: "+ record.getCustomer().getHouseNumber());
+               System.out.println("Units Consumed: "+ record.getCustomer().getUnitsConsumed());
+               System.out.println("Bill Amount: "+ record.getBillAmount());
            }else if(option == 3){
                System.out.println("tata");
                break;
